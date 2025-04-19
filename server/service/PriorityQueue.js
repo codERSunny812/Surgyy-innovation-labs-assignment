@@ -9,9 +9,7 @@ class PriorityQueue{
 
         this.queue.sort((a, b) => {
             if (a.triageLevel !== b.triageLevel) {
-                // return a.triageLevel - b.triageLevel; 
-
-                return b.triageLevel - a.triageLevel; 
+                return a.triageLevel - b.triageLevel; 
             }
             return a.timestamp - b.timestamp; 
         });

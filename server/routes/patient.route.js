@@ -7,7 +7,6 @@ PatientRouter.get('/',(req,res)=>{
     res.send("hello from patient  route")
 })
 
-
 // route to add the patient 
 PatientRouter.post('/add-patient',[
     body('name').notEmpty().withMessage('Name is required'),

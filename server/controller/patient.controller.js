@@ -49,10 +49,15 @@ const addPatient = (req, res) => {
 }
 
 const getPatientData = (req,res)=>{
-    res.json({
-        message:"the data of patient in queue",
-        data:PriorityQueue.getQueue()
-    })
+    try {
+        res.json({
+            message: "the data of patient in queue",
+            data: PriorityQueue.getQueue()
+        }) 
+    } catch (error) {
+        console.log("error in getting the data",error)
+    }
+    
 }
 
 

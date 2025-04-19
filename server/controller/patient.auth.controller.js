@@ -4,7 +4,7 @@ const {validationResult } = require('express-validator');
 
 
 
-const secret_key = process.env.JWT_SECRET
+const secret_key = process.env.JWT_SECRET || "your_secret_key";
 
 const checkPatientAuthRoute = (req, res) => {
   res.send("hello from the patient auth route");
@@ -81,11 +81,35 @@ const loginPatient = async (req, res) => {
             sameSite: "Strict",
         });
 
-        res.status(200).json({ message: "Login successful" });
+        res.status(200).json({ message: "Login successful",
+          token:token,
+          userData:user
+         });
 
     } catch (error) {
       return   res.status(500).json({ message: "Something went wrong", error: error.message });
     }
 };
 
-module.exports = { checkPatientAuthRoute, registerPatient, loginPatient };
+
+//verify auth 
+const verifyAuth = (req,res,next)=>{
+  const token = req.cookies.authToken;
+  if (!token) return res.status(401).json({ message: "No token found" });
+
+  try {
+    const decoded = jwt.verify(token, secret_key);
+    return res.status(200).json({ message: "Authenticated", user: decoded });
+  } catch (error) {
+    return res.status(401).json({ message: "Invalid token" });
+  }
+}
+
+
+const logOut = (req,res)=>{
+  res.clearCookie("authToken");
+  res.status(200).json({ message: "Logged out successfully" });
+
+}
+
+module.exports = { checkPatientAuthRoute, registerPatient, loginPatient,verifyAuth, logOut };

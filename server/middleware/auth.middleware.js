@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 
-const secret_key = process.env.JWT_SECRET
+const secret_key = process.env.JWT_SECRET || "your_secret_key";
 
 const loggerMiddleware = (req, res, next) => {
     console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
@@ -16,8 +16,6 @@ const errorMiddleware = (err, req, res, next) => {
 
 const authMiddleware = (req,res,next)=>{
 
-    console.log("middleware is running")
-
     const token = req.cookies.authToken;
 
     if (!token) {
@@ -29,7 +27,10 @@ const authMiddleware = (req,res,next)=>{
         req.user = decoded; // Attach user info to the request object
         next();
     } catch (error) {
-            return res.status(401).json({ message: "Invalid or expired token" });
+        console.log(error)
+            return res.status(401).json({ message: "Invalid or expired token",
+                err:error
+             });
     }
 
 

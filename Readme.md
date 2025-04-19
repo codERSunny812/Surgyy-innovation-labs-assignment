@@ -111,3 +111,25 @@ Feel free to submit pull requests or raise issues!
 
 - 👤 SUSHIL PANDEY
 - 📧 <sengersunny448@gmail.com>
+
+
+####  APP UI
+
+- SIGN UP PAGE
+
+  <img src='./images/Screenshot 2025-04-19 at 19.03.42.png/>
+
+
+- SIGN IN PAGE
+
+  <img src='./images/Screenshot 2025-04-19 at 19.04.10.png/>
+
+- HOME PAGE
+
+  <img src='./images/Screenshot 2025-04-19 at 19.04.27.png/>
+
+
+- WHEN CRITICAL PATIENT ADDED 
+
+  <img src='./images/Screenshot 2025-04-19 at 19.05.21.png/>
+  
