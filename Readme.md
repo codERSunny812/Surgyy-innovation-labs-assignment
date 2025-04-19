@@ -117,19 +117,24 @@ Feel free to submit pull requests or raise issues!
 
 - SIGN UP PAGE
 
-  <img src='./images/Screenshot 2025-04-19 at 19.03.42.png/>
+  <img width="311" alt="Screenshot 2025-04-19 at 19 03 42" src="https://github.com/user-attachments/assets/fe957f5b-9492-49e8-993c-75b6c7cb2e07" />
+
 
 
 - SIGN IN PAGE
+  
+ <img width="312" alt="Screenshot 2025-04-19 at 19 04 10" src="https://github.com/user-attachments/assets/0e788852-4727-433b-801b-cf509cd90fe6" />
 
-  <img src='./images/Screenshot 2025-04-19 at 19.04.10.png/>
+ 
 
 - HOME PAGE
 
-  <img src='./images/Screenshot 2025-04-19 at 19.04.27.png/>
+  
+ <img width="313" alt="Screenshot 2025-04-19 at 19 04 27" src="https://github.com/user-attachments/assets/9bc2f8ed-791d-4a02-b975-d8bf470c15ba" />
 
 
 - WHEN CRITICAL PATIENT ADDED 
 
-  <img src='./images/Screenshot 2025-04-19 at 19.05.21.png/>
+  <img width="332" alt="Screenshot 2025-04-19 at 19 05 21" src="https://github.com/user-attachments/assets/27ae30c4-8bc8-4d62-8a7c-51209a494407" />
+
   
